@@ -1,0 +1,38 @@
+POST http://localhost:3002/api/persons
+Content-Type: application/json
+
+# Valid POST request
+{
+  "name": "Ali",
+  "number": "0123456789"
+}
+
+########################################
+POST http://localhost:3002/api/persons
+Content-Type: application/json
+
+# Missing name field
+{
+  "name": "",
+  "number": "0123456789"
+}
+
+########################################
+POST http://localhost:3002/api/persons
+Content-Type: application/json
+
+# Missing number field
+{
+  "name": "Muthu",
+  "number": ""
+}
+
+######################################
+POST http://localhost:3002/api/persons
+Content-Type: application/json
+
+# non-unique name
+{
+  "name": "Arto Hellas",
+  "number": "0123456"
+}
